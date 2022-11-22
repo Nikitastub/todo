@@ -3,7 +3,7 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      Don't forget your plans!
+      Don't forget your plans !
     </div>
   );
 }
