@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Nikitastub/todo/static/css/main.49bcdb52.css",
+    "main.js": "/Nikitastub/todo/static/js/main.cd0faa9f.js",
+    "index.html": "/Nikitastub/todo/index.html",
+    "main.49bcdb52.css.map": "/Nikitastub/todo/static/css/main.49bcdb52.css.map",
+    "main.cd0faa9f.js.map": "/Nikitastub/todo/static/js/main.cd0faa9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49bcdb52.css",
+    "static/js/main.cd0faa9f.js"
+  ]
+}
