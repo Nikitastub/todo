@@ -12,7 +12,6 @@ export const TaskList = () => {
             <ul className="task__list">
                 {todos.length 
                 ? (isOnlyHigh ? listHigh : listAll)
-                // : <img style={{width: "300px", display: "flex"}} src="https://assets.stickpng.com/images/5eb95c3817f3c600044a290d.png" alt="" />}
                 : <span style={{"font-size": "1.5rem"}}>No plans for today ...</span>}
             </ul>
         )
