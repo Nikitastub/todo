@@ -12,7 +12,7 @@ export const TaskList = () => {
             <ul className="task__list">
                 {todos.length 
                 ? (isOnlyHigh ? listHigh : listAll)
-                : <span style={{"font-size": "1.5rem"}}>No plans for today ...</span>}
+                : <span className="no-plans">No plans for today ...</span>}
             </ul>
         )
     } 

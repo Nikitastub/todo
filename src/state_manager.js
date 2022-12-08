@@ -1,5 +1,4 @@
-import {createStore, createEvent, restore} from 'effector'
-
+import {createStore, createEvent, restore, sample} from 'effector'
 const addNote = createEvent()
 const deleteNote = createEvent()
 const clearAll = createEvent()
@@ -12,7 +11,7 @@ const changeInput = createEvent()
 const changeEditInput = createEvent()
 const saveEditInput = createEvent()
 
-const $inputText = restore(changeInput, '').reset(addNote).reset(clearAll)
+const $inputText = restore(changeInput, '').reset([addNote, clearAll])
 const $inputEditText = restore(changeEditInput, '').reset(saveEditInput)
 const $isOnlyHigh = restore(setOnlyHigh, false)
 const $isDarkMode = restore(setDarkMode, false)
@@ -25,6 +24,14 @@ const $todos = createStore([])
     .on(deleteNote, (state, payload) => state.filter(item => item.id !== payload))
     .reset(clearAll)
 
+
+
+sample({
+    clock: setEdit,
+    source: $todos,
+    fn: (todos, id) => todos.filter(todo => todo.id === id)[0].text,
+    target: $inputEditText,
+})
    
 
 export {
